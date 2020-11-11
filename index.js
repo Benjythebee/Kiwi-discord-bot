@@ -1,6 +1,7 @@
 require('dotenv').config();
 const express = require('express')
 var app = express()
+const path = require('path')
 app.use(express.static(path.join(__dirname)))
 const Discord = require('discord.js');
 const bot = new Discord.Client();
