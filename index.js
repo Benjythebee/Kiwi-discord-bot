@@ -30,6 +30,6 @@ app.get('/',(req,res)=>{
   res.send(':)')
 })
 
-app.listen('8000', ()=>{
+app.listen(process.env.PORT || 5000, ()=>{
 console.log('App is listening')
 })
