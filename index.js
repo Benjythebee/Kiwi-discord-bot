@@ -1,8 +1,11 @@
 require('dotenv').config();
+const express = require('express')
+var app = express()
+app.use(express.static(path.join(__dirname)))
 const Discord = require('discord.js');
 const bot = new Discord.Client();
 const TOKEN = process.env.TOKEN;
-console.log(TOKEN)
+
 bot.login(TOKEN);
 
 bot.on('ready', () => {
@@ -19,3 +22,13 @@ bot.on('message', msg => {
 
   }
 });
+
+
+app.get('/',(req,res)=>{
+ 
+  res.send(':)')
+})
+
+app.listen('8000', ()=>{
+console.log('App is listening')
+})
