@@ -15,8 +15,15 @@ bot.on('ready', () => {
 
 var exclude = `second UNI`
 
+var exclude2 = `1inch Airdrop`
+
 bot.on('message', msg => {
   if (msg.content.toLowerCase().includes(exclude.toLowerCase())) {
+    msg.delete(2000)
+    msg.reply('**Fuck off mate.**').then(m=>{m.delete(3000)});
+    msg.channel.send(':warning: The message above is a scam. watch out!').then(m=>{m.delete(3000)});
+
+  }else if(msg.content.toLowerCase().includes(exclude2.toLowerCase())){
     msg.delete(2000)
     msg.reply('**Fuck off mate.**').then(m=>{m.delete(3000)});
     msg.channel.send(':warning: The message above is a scam. watch out!').then(m=>{m.delete(3000)});
