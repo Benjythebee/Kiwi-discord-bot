@@ -15,7 +15,7 @@ bot.on('ready', () => {
 
 var exclude = `second UNI`
 
-var exclude2 = `1inch Airdrop`
+var exclude2 = `1inch christmas`
 
 bot.on('message', msg => {
   if (msg.content.toLowerCase().includes(exclude.toLowerCase())) {
