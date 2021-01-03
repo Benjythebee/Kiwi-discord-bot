@@ -19,6 +19,8 @@ var exclude2 = `1inch christmas`
 
 var exclude3= `1inchs christmas airdrop`
 
+var exclude4 =`1inⅽhs ⅽhristmas`
+
 var hello=`Hello everyone`
 var hello2=`Hey team`
 
@@ -40,7 +42,8 @@ const friendlyLines =[
 bot.on('message', msg => {
   if (msg.content.toLowerCase().includes(exclude.toLowerCase())
   || msg.content.toLowerCase().includes(exclude2.toLowerCase())
-  || msg.content.toLowerCase().includes(exclude3.toLowerCase())) {
+  || msg.content.toLowerCase().includes(exclude3.toLowerCase())
+  || msg.content.toLowerCase().includes(exclude4.toLowerCase())) {
     replyBad(msg)
 
   }else if(msg.content.toLowerCase().includes(hello.toLowerCase())
