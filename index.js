@@ -41,14 +41,14 @@ bot.on('message', msg => {
   if (msg.content.toLowerCase().includes(exclude.toLowerCase())
   || msg.content.toLowerCase().includes(exclude2.toLowerCase())
   || msg.content.toLowerCase().includes(exclude3.toLowerCase())) {
-    replyBad()
+    replyBad(msg)
 
   }else if(msg.content.toLowerCase().includes(hello.toLowerCase())
   || msg.content.toLowerCase().includes(hello2.toLowerCase())){
-    replyHello()
+    replyHello(msg)
 
   }else if(msg.content.toLowerCase().includes(bruh.toLowerCase())){
-    replyGood()
+    replyGood(msg)
 
   }
 
@@ -65,16 +65,16 @@ function friendlyResponse(){
   return friendlyLines[2]
 }
 
-function replyBad(){
+function replyBad(msg){
   msg.delete(2000)
   msg.reply(badResponse()).then(m=>{m.delete(3000)});
   msg.channel.send(':warning: The message above is a scam. watch out!').then(m=>{m.delete(3000)});
 }
 
-function replyGood(){
+function replyGood(msg){
   msg.reply(friendlyResponse());
 }
-function replyHello(){
+function replyHello(msg){
   msg.reply(HelloResponse());
 }
 
