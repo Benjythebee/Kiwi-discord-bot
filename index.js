@@ -17,20 +17,66 @@ var exclude = `second UNI`
 
 var exclude2 = `1inch christmas`
 
-bot.on('message', msg => {
-  if (msg.content.toLowerCase().includes(exclude.toLowerCase())) {
-    msg.delete(2000)
-    msg.reply('**Fuck off mate.**').then(m=>{m.delete(3000)});
-    msg.channel.send(':warning: The message above is a scam. watch out!').then(m=>{m.delete(3000)});
+var exclude3= `1inchs christmas airdrop`
 
-  }else if(msg.content.toLowerCase().includes(exclude2.toLowerCase())){
-    msg.delete(2000)
-    msg.reply('**Fuck off mate.**').then(m=>{m.delete(3000)});
-    msg.channel.send(':warning: The message above is a scam. watch out!').then(m=>{m.delete(3000)});
+var hello=`Hello everyone`
+var hello2=`Hey team`
+
+var bruh=`bruh`
+
+const Badlines =[
+  `**Fuck off mate.**`,
+  `**I'm tired of this shit.**`,
+  `**Jesus christ.**`,
+  `**Another one! quick destroy it!.**`
+]
+
+const friendlyLines =[
+  `Hey bud`,
+  `Wassssaaaa`,
+  `Bruh`
+]
+
+bot.on('message', msg => {
+  if (msg.content.toLowerCase().includes(exclude.toLowerCase())
+  || msg.content.toLowerCase().includes(exclude2.toLowerCase())
+  || msg.content.toLowerCase().includes(exclude3.toLowerCase())) {
+    replyBad()
+
+  }else if(msg.content.toLowerCase().includes(hello.toLowerCase())
+  || msg.content.toLowerCase().includes(hello2.toLowerCase())){
+    replyHello()
+
+  }else if(msg.content.toLowerCase().includes(bruh.toLowerCase())){
+    replyGood()
 
   }
+
 });
 
+function badResponse(){
+  return Badlines[Math.floor(Math.random()*(Badlines.length))]
+}
+function HelloResponse(){
+  return friendlyLines[Math.floor(Math.random()*(2))]
+}
+
+function friendlyResponse(){
+  return friendlyLines[2]
+}
+
+function replyBad(){
+  msg.delete(2000)
+  msg.reply(badResponse()).then(m=>{m.delete(3000)});
+  msg.channel.send(':warning: The message above is a scam. watch out!').then(m=>{m.delete(3000)});
+}
+
+function replyGood(){
+  msg.reply(friendlyResponse());
+}
+function replyHello(){
+  msg.reply(HelloResponse());
+}
 
 app.get('/',(req,res)=>{
  
