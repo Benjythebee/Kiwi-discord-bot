@@ -36,7 +36,7 @@ const Badlines =[
 const friendlyLines =[
   `Hey bud`,
   `Wassssaaaa`,
-  `Bruh`
+  `Bruuuh`
 ]
 
 bot.on('message', msg => {
