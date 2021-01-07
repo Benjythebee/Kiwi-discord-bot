@@ -23,6 +23,8 @@ var exclude4 =`1inⅽhs ⅽhristmas`
 
 var exclude5 =`started an Ethereum 2.0 Airdrop`
 
+var exclude6 =`ether with that ethereum 2.0 airdrop`
+
 var hello=`Hello everyone`
 var hello2=`Hey team`
 
@@ -46,7 +48,8 @@ bot.on('message', msg => {
   || msg.content.toLowerCase().includes(exclude2.toLowerCase())
   || msg.content.toLowerCase().includes(exclude3.toLowerCase())
   || msg.content.toLowerCase().includes(exclude4.toLowerCase())
-  || msg.content.toLowerCase().includes(exclude5.toLowerCase())) {
+  || msg.content.toLowerCase().includes(exclude5.toLowerCase())
+  || msg.content.toLowerCase().includes(exclude6.toLowerCase())) {
     replyBad(msg)
 
   }else if(msg.content.toLowerCase().includes(hello.toLowerCase())
