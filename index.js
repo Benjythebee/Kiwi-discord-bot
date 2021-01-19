@@ -29,6 +29,7 @@ var exclude6 =`ether with that ethereum 2.0 airdrop`
 
 var exclude8 =`started an Ethereum 2.0 Aⅰrdrop`
 var exclude9 =`the ethereum 2.0 airdrop started`
+var exclude12 = `the ethereum airdrop started today`
 var exclude7 = `ethereum started an airdrop`
 
 var hello=`Hello everyone`
@@ -60,6 +61,7 @@ bot.on('message', msg => {
   || msg.content.toLowerCase().includes(exclude10.toLowerCase())
   || msg.content.toLowerCase().includes(exclude8.toLowerCase())
   || msg.content.toLowerCase().includes(exclude11.toLowerCase())
+  || msg.content.toLowerCase().includes(exclude12.toLowerCase())
   || msg.content.toLowerCase().includes(exclude9.toLowerCase())) {
     replyBad(msg)
 
