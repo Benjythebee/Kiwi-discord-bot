@@ -16,7 +16,7 @@ bot.on('ready', () => {
 var exclude = `second UNI`
 
 var exclude2 = `1inch christmas`
-
+var exclude12 = `dont miss the current ethereum 2.0 airdrop`
 var exclude3= `1inchs christmas airdrop`
 
 var exclude4 =`1inⅽhs ⅽhristmas`
