@@ -16,7 +16,7 @@ bot.on('ready', () => {
 var exclude = `second UNI`
 
 var exclude2 = `1inch christmas`
-var exclude12 = `dont miss the current ethereum 2.0 airdrop`
+var exclude13 = `dont miss the current ethereum 2.0 airdrop`
 var exclude3= `1inchs christmas airdrop`
 
 var exclude4 =`1inⅽhs ⅽhristmas`
@@ -62,6 +62,7 @@ bot.on('message', msg => {
   || msg.content.toLowerCase().includes(exclude8.toLowerCase())
   || msg.content.toLowerCase().includes(exclude11.toLowerCase())
   || msg.content.toLowerCase().includes(exclude12.toLowerCase())
+  || msg.content.toLowerCase().includes(exclude13.toLowerCase())
   || msg.content.toLowerCase().includes(exclude9.toLowerCase())) {
     replyBad(msg)
 
