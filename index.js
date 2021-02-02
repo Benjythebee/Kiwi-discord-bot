@@ -22,7 +22,7 @@ var exclude3= `1inchs christmas airdrop`
 var exclude4 =`1inⅽhs ⅽhristmas`
 
 var exclude5 =`started an Ethereum 2.0 Airdrop`
-var exclude10 =`aⅰrdrop`
+var exclude10 =`aⅰrdrop`;
 var exclude11 = `ethereuⅿ`
 
 var exclude6 =`ether with that ethereum 2.0 airdrop`
